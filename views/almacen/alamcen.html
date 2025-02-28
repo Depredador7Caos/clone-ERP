@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Catalogos </title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="/src/public/css/style.css">
+
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="logo">
+            <figure class="figure-logo">
+                <a href="/">
+                    <img class="nav-logo" src="/src/public/img/logo-2.png" alt="Not found img">
+                </a>
+            </figure>
+        </div>
+        <div class="nav-cont-list">
+            <ul class="nav-ul">
+                <li class="item-access">
+                    <a href="#" class="item-link"> Modelos </a>
+                </li>
+
+                <li class="item-access">
+                    <a href="#" class="item-link"> Ayuda </a>
+                </li>
+
+                <li class="item-access">
+                    <a href="#" class="item-link"> About us </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="catalogo">
+
+        <div class="main">
+            <!-- HHEAD LIST -->
+            <div class="name-list-opc">
+                <a class="list-name" id="list-name"></a>
+                <i class='bx bx-arrow-back'></i>
+            </div>
+
+            <!-- CONTENT LIST -->
+            <div class="panel-list" id="contenedor"> </div>
+
+            <!-- OPTIONS TO CONTENT LIST -->
+            <div class="control-list">
+                <ul>
+                    <li class="">
+                        <div class="select">
+                            <i class='click bx bxs-box'></i>
+                            <a class="" href="#" id="view-inventario"> Inventario </a>
+                        </div>
+                    </li>
+
+                    <li class="">
+                        <div class="select">
+                            <i class='click bx bxs-box'></i>
+                            <a class="" href="#" id="view-mro"> MRO </a>
+                        </div>
+                    </li>
+
+                    <li class="">
+                        <div class="select">
+                            <i class='click bx bxs-box'></i>
+                            <a class="" href="#" id="view-consimubles"> Consumibles </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="select">
+                            <i class='click bx bxs-box'></i>
+                            <a class="" href="#" id="view-herramientas"> Herramientas </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="select">
+                            <i class='click bx bx-cog'></i>
+                            <a class="" href="#" id="view-opciones"> Opciones </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CONTENT PAGE SO OPTION'S -->
+        <div class="aside">
+
+        </div>
+
+    </div>
+
+
+    <script src="/src/routes/almacen/almacen.js"></script>
+
+</body>
+
+</html>
