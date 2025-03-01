@@ -56,3 +56,27 @@ function structList(data) {
 
    return data;
 }
+
+function getListInventario(){
+    alert("inventario");
+}
+
+function getListMRO() {
+    alert("inventario");
+    
+}
+
+function getListComsumibles() {
+    alert("inventario");
+    
+}
+
+function getListHerramientas() {
+    alert("inventario");
+    
+}
+
+function getListOpciones(params) {
+    alert("inventario");
+    
+}
