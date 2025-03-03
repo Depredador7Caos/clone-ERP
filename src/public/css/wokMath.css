@@ -4,6 +4,7 @@
     --nav-medida: 4.5rem;
     --color-primary: #5b21b6;
     --color-secondary: #f59e0b;
+    --color-thrid: #fbbf24;
 }
 
 * {
@@ -24,6 +25,8 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    font-family: "Noto Serif", sans-serif;
+
 }
 
 .header {
@@ -59,7 +62,6 @@ body {
     align-items: center;
     font-weight: 600;
     font-size: 1.7rem;
-    font-family: "Noto Serif", sans-serif;
 }
 
 .header .nav .nav-container .nav-left .logo>.img-logo {
@@ -133,6 +135,13 @@ body {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4), 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
+.btn-thrid {
+    background-color: var(--color-thrid);
+    color: var(--color-white);
+    font-weight: 500;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4), 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
 /********************* HOVER'S BUTTON'S **********************/
 .btn-push-primary:active {
     box-shadow: none;
@@ -155,19 +164,66 @@ body {
     min-height: 100vh;
 }
 
+.seccion {
+    width: 100%;
+    height: auto;
+    margin: 0.5rem 0;
+}
+
 .seccion .seccion-img{
     position: relative;
-    width: 100%;
-    height: 300px;
+    max-width:100%;
+    height: 400px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
 }
 
 .seccion .seccion-img > .img-portada-principal{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    border: 1px solid var(--color-secondary);
+    width: 90%;
+    height: 50%;
+    
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
 }
 
+.seccion .seccion-text-portada {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+
+.seccion .seccion-text-portada > .text-portada {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    border: 1px solid var(--color-primary);
+
+}
+
+.seccion .content-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    align-items: center;
+    border: 1px solid var(--color-primary);
+}
+
+.seccion .content-controls > button {
+    margin: 0.5rem 0;
+    max-width: 425px;
+    height: 3rem;
+}
 
 .footer {
     max-width: 100%;
