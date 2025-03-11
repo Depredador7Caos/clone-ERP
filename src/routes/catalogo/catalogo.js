@@ -1,5 +1,6 @@
-const catalogo = document.getElementById('catalogo');
+const catalogo = document.getElementById('#catalogo');
 const listName = document.querySelector('#list-name');
+
 const viewcatalogo = document.querySelector('#view-cliente');
 const viewProvedores = document.querySelector('#view-provedores');
 const viewSucursales = document.querySelector('#view-sucursales');
@@ -138,7 +139,6 @@ function getListOpciones() {
 
          for (let i = 0; i < opc.length; i++) {
             structList(opc[i]);
-            console.log(opc[i]);
             
          }
       }
