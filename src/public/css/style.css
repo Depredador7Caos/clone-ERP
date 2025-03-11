@@ -278,15 +278,27 @@ figure, .img-portada{
 }
 
 .main .panel-list > ul > li > div > i{
-    width: 10%;
+    width: 15%;
     height: 100%;
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
+    font-weight: 800;
     text-align: center;
     justify-content: center;
+    border:  1px solid red;
+}
+
+.main .panel-list > ul > li > div > .bxs-down-arrow{
+    width: 15%;
+    height: 100%;
+    font-size: 0.7rem !important;
+    font-weight: 800;
+    text-align: center;
+    justify-content: center;
+    border:  1px solid red;
 }
 
 .main .panel-list > ul > li > div > a{
-    width: 90%;
+    width: 85%;
     height: 100%;
     font-size: 0.9rem;
     color: var(--color-black);

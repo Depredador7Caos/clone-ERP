@@ -1,3 +1,4 @@
+const almacen = document.querySelector("#almacen");
 const listName = document.querySelector("#list-name");
 
 

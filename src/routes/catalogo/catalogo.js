@@ -1,4 +1,3 @@
-const catalogo = document.getElementById('#catalogo');
 const listName = document.querySelector('#list-name');
 
 const viewcatalogo = document.querySelector('#view-cliente');
@@ -51,6 +50,20 @@ function structList(data) {
 
    //li.className = "";
    icono.className = "bx bx-caret-right";
+   li.className = "item-list";
+
+   li.onclick = rotateArrow;
+
+   function rotateArrow() {
+      if (li.className === "item-list") {
+         li.className = "rotate";
+         icono.className = "bx bxs-down-arrow";
+      } else {
+         li.className = "item-list";
+         icono.className = "bx bx-caret-right";
+      }
+   }
+
    listaCatalogo.appendChild(li);
    li.appendChild(div);
    div.appendChild(icono);
@@ -60,6 +73,8 @@ function structList(data) {
 
    return data;
 }
+
+
 function getListcatalogo () {
    listaCatalogo.innerHTML = "";
    
@@ -78,6 +93,7 @@ function getListcatalogo () {
    return opcClientes;
 }
 
+
 function getListProvedores() {
    listaCatalogo.innerHTML = "";
 
@@ -94,6 +110,7 @@ function getListProvedores() {
 
    return opcProveedores;
 }
+
 
 function getListSucursales() {
    listaCatalogo.innerHTML = "";
@@ -112,6 +129,7 @@ function getListSucursales() {
    return opcSucursales;
 }
 
+
 function getListPersonal() {
    listaCatalogo.innerHTML = "";
 
@@ -128,6 +146,7 @@ function getListPersonal() {
 
    return opcPersonal;
 }
+
 
 function getListOpciones() {
    listaCatalogo.innerHTML = "";
