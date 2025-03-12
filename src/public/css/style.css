@@ -232,7 +232,6 @@ figure, .img-portada{
     width: 100%;
     height: 4%;
     box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--color-black);
 }
 
 .main .name-list-opc > a {
@@ -259,7 +258,6 @@ figure, .img-portada{
     width: 100%;
     height: 66%;
 
-    border: 1px solid var(--color-black);
 }
 
 .main .panel-list > ul {
@@ -274,7 +272,13 @@ figure, .img-portada{
     display: flex;
     height: 1.3rem;
     align-items: center;
+    transition: all 0.3s ease-out;
+}
 
+.main .panel-list > ul > li > div:hover{
+    background: var(--color-blue-easy);
+    padding: 0 0 0 0.3rem;
+    cursor: pointer;
 }
 
 .main .panel-list > ul > li > div > i{
@@ -284,21 +288,20 @@ figure, .img-portada{
     font-weight: 800;
     text-align: center;
     justify-content: center;
-    border:  1px solid red;
 }
 
 .main .panel-list > ul > li > div > .bxs-down-arrow{
+    position: relative;
     width: 15%;
     height: 100%;
     font-size: 0.7rem !important;
     font-weight: 800;
     text-align: center;
     justify-content: center;
-    border:  1px solid red;
 }
 
-.main .panel-list > ul > li > div > a{
-    width: 85%;
+.main .panel-list > ul > li > div > a {
+    min-width: 85%;
     height: 100%;
     font-size: 0.9rem;
     color: var(--color-black);
@@ -313,8 +316,7 @@ figure, .img-portada{
     width: 100%;
     height: 30%;
     display: flex;
-
-    border: 1px solid var(--color-black);
+    box-shadow: -1px -1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .main .control-list > ul {
@@ -323,7 +325,6 @@ figure, .img-portada{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 .main .control-list > ul > li > div{
@@ -352,6 +353,38 @@ figure, .img-portada{
     display: flex;
     align-items: center;
 }
+
+.item-list-display .container-list-display {
+    display: flex;
+    width: 100%;
+    height: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.item-list-display:hover {
+    background: var(--color-blue-easy);
+}
+
+.item-list-display .container-list-display > i {
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.item-list-display .container-list-display > a {
+    width: 80%;
+    flex-wrap: wrap;
+    transition: all 0.4s ease-in-out;
+}
+
+.item-list-display .container-list-display > a:hover {
+    transform: translateX(-4.5%);
+}
+
+.item-list-display .container-list-display > i, a {
+    display: flex;
+} 
 
 .select:hover{
     background-color: var(--color-blue-easy);
@@ -389,7 +422,6 @@ figure, .img-portada{
         bottom: 0;
         right: 0;
         left: 0;
-        border: 1px solid red;
     }
 
     .container-sm {
@@ -399,8 +431,6 @@ figure, .img-portada{
         overflow-y: scroll;
 
         border: 1px solid var(--color-black);
-
-
     }
 
     .cont-btn{

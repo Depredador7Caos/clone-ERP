@@ -113,3 +113,65 @@ const dataOpcion = [
        ]
     }
  ]
+
+ 
+ function structList(data) {
+   contenedor.appendChild(listaAlmacen);
+   const li = document.createElement("li");
+   const div = document.createElement("div");
+   const icono = document.createElement("i");
+   const text = document.createElement("a");
+
+
+   icono.className = "bx bx-caret-right";
+
+   text.className = "item-list";
+
+   text.onclick = rotateArrow;
+
+   function rotateArrow() {
+       if (text.className === "item-list") {
+           text.className = "rotate";
+           icono.className = "bx bxs-down-arrow";
+           despligueOpcion();
+
+       } else {
+           text.className = "item-list";
+           icono.className = "bx bx-caret-right";
+           ulDesplegable.remove();
+           ulDesplegable.innerHTML = "";
+       }
+   }
+
+   /* DISPLAY OPTIONS */
+   function despligueOpcion(dataDisplay) {
+       const lista = document.createElement("li");
+       const div = document.createElement("div");
+       const icon = document.createElement("i");
+       const text = document.createElement("a");
+
+       lista.className = "item-list-display";
+       div.className = "container-list-display";
+       icon.className = "bx bx-caret-right"
+
+       text.textContent = `${dataDisplay}`;
+
+       li.appendChild(ulDesplegable);
+
+       ulDesplegable.appendChild(lista);
+       lista.appendChild(div);
+       div.appendChild(icon);
+       div.appendChild(text);
+
+       return dataDisplay;
+   }
+
+   listaAlmacen.appendChild(li);
+   li.appendChild(div);
+   div.appendChild(icono);
+   div.appendChild(text);
+
+   text.textContent = `${data}`;
+
+   return data;
+}

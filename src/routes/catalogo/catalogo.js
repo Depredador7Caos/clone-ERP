@@ -22,21 +22,24 @@ viewOpciones.onclick = getListOpciones;
 const dataOpcion = [
    {
       name: "Clientes",
-      "options": ["clientes","vendedores","reportes"]
+      "options": ["Clientes", "Vendedores", "Reportes"]
    },
    {
       name: "Provedores",
-      "options": ["provedores", "prospectos", "catalogos", "reportes"],
+      "options": ["Provedores", "Prospectos", "Catalogos", "Reportes"],
    },
-   { name: "Sucursales",
+   {
+      name: "Sucursales",
       "options": ["Listado", "Sucursales"],
    },
-   { name: "Personal",
+   {
+      name: "Personal",
       "options": ["Interno", "Externo", "Produccion", "Mantenimiento", "Consumibles", "Almacenes"],
    },
-   { name: "Opciones",
+   {
+      name: "Opciones",
       "options": ["Configuracion", "Indicadores", "Reportes", "Catalogos SAT"],
-   } 
+   }
 ];
 
 //GENERATOR STRUCTURE LIST IN CONTAINER
@@ -75,16 +78,16 @@ function structList(data) {
 }
 
 
-function getListcatalogo () {
+function getListcatalogo() {
    listaCatalogo.innerHTML = "";
-   
-   const opcClientes = dataOpcion.map((optionsCliente ) => {
+
+   const opcClientes = dataOpcion.map((optionsCliente) => {
       if (optionsCliente.name === "Clientes") {
          const opc = optionsCliente.options;
          listName.textContent = optionsCliente.name;
 
-         for(let i = 0; i < opc.length; i++) {
-               structList(opc[i]);
+         for (let i = 0; i < opc.length; i++) {
+            structList(opc[i]);
             //console.log(opc[i]);
          }
       }
@@ -97,12 +100,12 @@ function getListcatalogo () {
 function getListProvedores() {
    listaCatalogo.innerHTML = "";
 
-   const opcProveedores = dataOpcion.map((optionsProveedor)=>{
-      if(optionsProveedor.name === "Provedores"){
+   const opcProveedores = dataOpcion.map((optionsProveedor) => {
+      if (optionsProveedor.name === "Provedores") {
          const opc = optionsProveedor.options;
          listName.textContent = optionsProveedor.name;
 
-         for(let i = 0; i < opc.length; i++){
+         for (let i = 0; i < opc.length; i++) {
             structList(opc[i]);
          }
       }
@@ -121,7 +124,7 @@ function getListSucursales() {
          listName.textContent = optionSucursal.name;
 
          for (let i = 0; i < opc.length; i++) {
-            structList(opc[i])         
+            structList(opc[i])
          }
       }
    });
@@ -139,7 +142,7 @@ function getListPersonal() {
          listName.textContent = optionsPersonal.name;
 
          for (let i = 0; i < opc.length; i++) {
-            structList(opc[i])         
+            structList(opc[i])
          }
       }
    });
@@ -154,11 +157,11 @@ function getListOpciones() {
    const opcOpciones = dataOpcion.map((optionsSettings) => {
       if (optionsSettings.name === "Opciones") {
          const opc = optionsSettings.options;
-         listName.textContent =optionsSettings.name;
+         listName.textContent = optionsSettings.name;
 
          for (let i = 0; i < opc.length; i++) {
             structList(opc[i]);
-            
+
          }
       }
    });
