@@ -28,22 +28,22 @@ const dataOptions = [
     {
         name: "MRO",
         options: ["Inventario"],
-        opcDisplay: ["opc - 1 ","opc - 2"]
+        opcDisplay: ["opc - 3 ","opc - 4"]
     },
     {
         name: "Consumibles",
         options: ["Inventario"],
-        opcDisplay: ["opc - 1 ","opc - 2"]
+        opcDisplay: ["opc - 5 ","opc - 6"]
     },
     {
         name: "Herramientas",
         options: ["Herramientas", "Herramientas"],
-        opcDisplay: ["opc - 1 ","opc - 2"]
+        opcDisplay: ["opc - 7 ","opc - 8"]
     },
     {
         name: "Opciones",
         options: ["null"],
-        opcDisplay: ["opc - 1 ","opc - 2"]
+        opcDisplay: ["opc - 9 ","opc - 10"]
     },
 ];
 
@@ -64,6 +64,14 @@ function structList(data) {
 
     text.onclick = rotateArrow;
 
+    /*
+        DAR FUNCIONALIDAD CORRECTA AL DESPLIGUE DE LISTA, DE TAL AMNERA CADA UNO TENGA SUS OPCIONES.
+        DAR LIMPIEZA AL CODIGO, TRATAR DE AGRUPAR LAS FUNCIONES CON CADA UNO DE SUS EVENTOS.
+        CORRECION DE ESTRUCTURA Y FORMLAIDAD A LA SINTAXIS DEL CODIGO.
+        BUSCAR NUEVAS Y POSIBLES FUNCIONALIDADES AL MOMENTO DE REALIZAR UN EVNTO DE DESPLIGUE EN LA LISTAS.
+    
+    */
+
     function rotateArrow() {
         if (text.className === "item-list") {
             text.className = "rotate";
@@ -77,19 +85,21 @@ function structList(data) {
             ulDesplegable.innerHTML = "";
         }
     }
+    
 
     /* DISPLAY OPTIONS */
-    function despligueOpcion(dataDisplay) {
+    function despligueOpcion() {
         const lista = document.createElement("li");
         const div = document.createElement("div");
         const icon = document.createElement("i");
         const text = document.createElement("a");
 
+
         lista.className = "item-list-display";
         div.className = "container-list-display";
-        icon.className = "bx bx-caret-right"
-
-        text.textContent = `${dataDisplay}`;
+        icon.className = "bx bx-caret-right"; 
+        
+        text.textContent = "Reparaciones";
 
         li.appendChild(ulDesplegable);
 
@@ -98,8 +108,7 @@ function structList(data) {
         div.appendChild(icon);
         div.appendChild(text);
 
-        // analizar la parte de tranferenci ade adato por parte de la lista
-        return dataDisplay;
+        
     }
 
     listaAlmacen.appendChild(li);
@@ -112,24 +121,25 @@ function structList(data) {
     return data;
 }
 
-function getListInventario() {
+
+
+function getListInventario(dataDisplay) {
     listaAlmacen.innerHTML = "";
 
-    const opcInventarios = dataOptions.map((listInventario) => {
+    opcInventarios = dataOptions.map((listInventario) => {
         if (listInventario.name === "Inventario") {
             const opc = listInventario.options;
+
             listName.textContent = `${listInventario.name}`;
+
             for (let i = 0; i < opc.length; i++) {
                 structList(opc[i]);
             }
-        }
 
-        if (listInventario.options === "Inventario General") {
-            alert("Estamos en inventarios");
         }
     });
 
-    return opcInventarios;
+    return dataDisplay;
 }
 
 function getListMRO() {
